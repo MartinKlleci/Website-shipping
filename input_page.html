@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Adress Form</title>
+        
+        
+        <link rel="stylesheet" href="shipping_page_style.css">
+
+    </head>
+    <body>
+
+        <form id="address_form" action="/shipping_input.js">
+
+            <p class="title">Fill address form</p>
+            <p class="note"><em>* = required field</em></p>
+
+            <label class="full-field">
+              <span class="form-label">Full name*</span><br>
+              <input id="fname" name="fname" required />
+            </label><br>
+            <label class="full-field">
+              <span class="form-label">Telephone*</span><br>
+              <input id="phone" name="phone" required />
+            </label><br><br>
+
+            <div class="dropdown">
+              <label for="countrySelect">Country/Region*</label>
+              <select id="countrySelect" required></select>
+            </div><br>
+            
+            <label class="slim-field-start">
+              <span class="form-label">State/Province*</span><br>
+              <input id="provinca" name="provinca" required />
+            </label><br>
+            <label class="full-field">
+              <span class="form-label">City*</span><br>
+              <input id="qyteti" name="qyteti" required />
+            </label><br>
+            <label class="slim-field-end" for="postal_code">
+              <span class="form-label">Postal code*</span><br>
+              <input id="kodi_postar" type="number" name="kodi_postar" required />
+            </label><br>
+            <label class="full-field">
+              <span class="form-label">Apartment, unit, floor</span><br>
+              <input id="adresa2" name="adresa2" />
+            </label><br><br>
+
+            <div class="notes">
+              <label for="additionalNotes">Additional Notes:</label><br>
+              <textarea id="additionalNotes" rows="4" cols="50"></textarea>
+            </div><br>
+              
+              <button onclick="print_user_input()">Save Address</button>
+              <input type="reset" value="Clear form" />   
+        </form>
+
+      <script type="module" src="address_form.ts"></script>
+      <script type="module" src="dropdown_countries/select_country.ts"></script>
+
+    </body>
+</html>
